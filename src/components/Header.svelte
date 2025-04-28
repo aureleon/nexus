@@ -1,14 +1,21 @@
 <script>
   import Icon from './Icon.svelte';
+  import Tab from './Tab.svelte';
+  import { theme, toggleTheme } from '../lib/ThemeStore.ts';
+  let currentTheme;
+  theme.subscribe(value => currentTheme = value);
 </script>
 
 <header>
   <Icon class="logo" src="/extra/aureleon.png" alt="Logo" width={56} height={56} />
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <Tab href="#about" label="About" />
+    <Tab href="#projects" label="Projects" />
+    <Tab href="#contact" label="Contact" />
   </nav>
+  <button aria-label="Toggle theme" on:click={toggleTheme} style="background:none;border:none;cursor:pointer;padding:0;margin-left:auto;">
+    <Icon src={currentTheme === 'light' ? '/extra/lightbulb-on.svg' : '/extra/lightbulb-off.svg'} alt="Lightbulb Icon" width={28} height={28} />
+  </button>
 </header>
 
 <style>
@@ -21,13 +28,6 @@ header {
   border-bottom: 1px solid #333;
 }
 
-.logo {
-  align-self: center;
-  margin-right: 2rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -35,17 +35,5 @@ nav {
   gap: 2rem;
   width: 100%;
   margin-top: 0.5rem;
-}
-nav a {
-  flex: 1 1 0;
-  text-align: center;
-  color: inherit;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-nav a:hover {
-  color: #00ADB5;
 }
 </style>

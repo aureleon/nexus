@@ -7,7 +7,7 @@
 
 <section class="hero hero-bounded">
   <div class="hero-text">
-    <h1>Hi, I'm Daniel 👋</h1>
+    <h1>Hi, I'm Daniel <span class="wave-emoji">👋</span></h1>
     <h3>I'm a life-long learner and a software engineer.</h3>
     <h3>Here's a bit about me:</h3>
     <ul class="creative-list">
@@ -16,11 +16,6 @@
       <li><div>🔍</div> Driven by pure curiosity and a love for lifelong learning</li>
       <li><div>🌍</div> Originally from Ventura, CA, but enjoying the sun in Austin.</li>
     </ul>
-  </div>
-  <div class="hero-icon">
-    <button aria-label="Toggle theme" on:click={toggleTheme} style="background:none;border:none;cursor:pointer;padding:0;">
-      <Icon src={currentTheme === 'light' ? '/extra/lightbulb-on.svg' : '/extra/lightbulb-off.svg'} alt="Lightbulb Icon" width={200} height={200} />
-    </button>
   </div>
 </section>
 
@@ -59,23 +54,10 @@
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-  .hero-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-icon img {
-    width: 200px;
-    opacity: 0.7;
-  }
   @media (max-width: 768px) {
     .hero {
       flex-direction: column;
       text-align: center;
-    }
-    .hero-icon img {
-      margin-top: 2rem;
     }
   }
   /* Add creative-list styling */
@@ -94,5 +76,21 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+  .wave-emoji {
+    display: inline-block;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .wave-emoji:hover {
+    animation: wiggle 0.5s;
+  }
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(8deg); }
+    100% { transform: rotate(0deg); }
   }
 </style>
