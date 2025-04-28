@@ -6,7 +6,7 @@
 <footer class="footer">
   <div class="footer-content-row">
     <div class="footer-main-text">
-      <div class="footer-copyright">&copy; {currentYear} Daniel Guzman.</div>
+      <div class="footer-copyright">&copy; {currentYear} Daniel Guzmán.</div>
       <div class="footer-connect">
         Let's connect:
         <span class="footer-socials">

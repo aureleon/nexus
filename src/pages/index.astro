@@ -1,13 +1,13 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.svelte';
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.svelte';
 import Footer from '../components/Footer.svelte';
+import App from '../routes/App.svelte';
 ---
-<BaseLayout>
+<Layout>
   <Header client:load />
   <main style="flex: 1; display: flex; align-items: center; justify-content: center;">
-    <Hero client:load />
+    <App client:only="svelte" />
   </main>
   <Footer client:load />
-</BaseLayout>
+</Layout>

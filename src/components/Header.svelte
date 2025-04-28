@@ -8,11 +8,11 @@
 </script>
 
 <header>
-  <Icon href="/" src="/extra/aureleon.png" alt="Logo" width={56} height={56} style="vertical-align: middle;" ariaLabel="Homepage" />
+  <Icon href="/#/" src="/extra/aureleon.png" alt="Logo" width={56} height={56} style="vertical-align: middle;" ariaLabel="Homepage" />
   <nav class="tab-nav">
-    <Tab href="#about" label="About" />
-    <Tab href="#projects" label="Projects" />
-    <Tab href="#contact" label="Contact" />
+    <Tab href="/#/about" label="About" />
+    <Tab href="/#/projects" label="Projects" />
+    <Tab href="/#/contact" label="Contact" />
   </nav>
   <ThemeButton lightSrc='/extra/lightbulb-on.svg' darkSrc='/extra/lightbulb-off.svg' />
 </header>
