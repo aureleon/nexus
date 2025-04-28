@@ -1,4 +1,9 @@
-<section>
-  <h1>About</h1><br>
-  <p>This is the About page.</p>
-</section>
+<script>
+  import Term from '../islands/Term.svelte';
+</script>
+
+<Term as="div">
+  <div class="terminal-content">
+    <p>This will be the page about me. :)</p>
+  </div>
+</Term>

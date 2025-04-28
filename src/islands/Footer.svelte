@@ -19,17 +19,11 @@
     <div class="built-with">
       <span>
         Built with
-        <a href="https://bun.sh/" target="_blank" rel="noopener" class="footer-link" aria-label="<Bun/>">
-          <Icon src="/icons/bun.svg" alt="Bun" width={20} height={20} style="vertical-align: middle;" />
-        </a>
+        <Icon href="https://bun.sh/" src="/icons/bun.svg" alt="Bun" width={20} height={20} style="vertical-align: middle;" ariaLabel="<Bun/>" target="_blank" rel="noopener" class="footer-link" />
         <span class="footer-plus">+</span>
-        <a href="https://svelte.dev/" target="_blank" rel="noopener" class="footer-link" aria-label="<Svelte/>">
-          <Icon src="/icons/svelte.svg" alt="Svelte" width={20} height={20} style="vertical-align: middle;" />
-        </a>
+        <Icon href="https://svelte.dev/" src="/icons/svelte.svg" alt="Svelte" width={20} height={20} style="vertical-align: middle;" ariaLabel="<Svelte/>" target="_blank" rel="noopener" class="footer-link" />
         <span class="footer-plus">+</span>
-        <a href="https://astro.build/" target="_blank" rel="noopener" class="footer-link" aria-label="<Astro/>">
-          <Icon src="/icons/astro.svg" alt="Astro" width={20} height={20} style="vertical-align: middle;" />
-        </a>
+        <Icon href="https://astro.build/" srcLight="/icons/astro-light.svg" srcDark='/icons/astro-dark.svg' alt="Astro" width={20} height={20} style="vertical-align: middle;" ariaLabel="<Astro/>" target="_blank" rel="noopener" class="footer-link" />
       </span>
     </div>
   </div>
@@ -40,12 +34,13 @@
   padding: 0.5rem 0 0.3rem 0;
   text-align: center;
   font-size: 0.9rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--border-color);
   margin-top: auto;
-  background: none;
+  background: var(--bg-color-secondary);
   box-shadow: none;
   width: 100vw;
   box-sizing: border-box;
+  color: var(--text-color);
 }
 
 .footer-content-row {
@@ -73,21 +68,6 @@
   gap: 0.5em;
 }
 
-.footer-link {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 0.08em 0 0.08em; /* Reduced margin */
-  transition: color 0.2s;
-  font-weight: 400;
-  font-size: 0.95rem; /* Slightly smaller font */
-  letter-spacing: 0.1em;
-}
-
-.footer-link:hover {
-  color: #00ADB5;
-  text-decoration: underline;
-}
-
 .built-with {
   flex: 0 0 auto;
   display: flex;
@@ -100,6 +80,7 @@
   gap: 0.15em;
   white-space: nowrap;
   margin-left: auto;
+  padding-right: 0.5em;
 }
 
 .footer-plus {

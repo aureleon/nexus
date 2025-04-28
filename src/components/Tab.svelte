@@ -12,14 +12,19 @@ a {
   max-width: 100%;
   padding: 0.5rem 1rem;
   text-align: center;
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
-  transition: color 0.1s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
+
 a:hover {
-  color: #00ADB5;
-  transform: scale(1.2);
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+a:active {
+  color: var(--accent-color-hover);
 }
 </style>

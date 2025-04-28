@@ -1,59 +1,24 @@
-<section class="home home-bounded">
-  <div class="home-text">
-    <h1>Hi, I'm Daniel <span class="wave-emoji">👋</span></h1>
-    <h3>I'm a life-long learner and a software engineer.</h3>
-    <h3>Here's a bit about me:</h3>
-    <ul class="creative-list">
-      <li><div>🛠️</div> An avid tinkerer across the full hardware/software stack</li>
-      <li><div>🐧</div> Passionate about the Linux ecosystem and FOSS programs</li>
-      <li><div>🔍</div> Driven by pure curiosity and a love for lifelong learning</li>
-      <li><div>🌍</div> Originally from Ventura, CA, but enjoying the sun in Austin.</li>
-    </ul>
-  </div>
+<script>
+import Term from '../islands/Term.svelte';
+</script>
+
+<section>
+  <Term as="div" className="home-text">
+    <div class="terminal-content">
+      <h1>Hey, I'm Daniel <span class="wave-emoji">👋</span></h1>
+      <h3>I'm a life-long learner and a software engineer.</h3>
+      <h3>Here's a bit about me:</h3>
+      <ul class="creative-list">
+        <li><div>🛠️</div> An avid tinkerer across the full hardware/software stack</li>
+        <li><div>🐧</div> Passionate about the Linux ecosystem and FOSS programs</li>
+        <li><div>🔍</div> Driven by pure curiosity and a love for lifelong learning</li>
+        <li><div>🌍</div> Originally from Ventura, CA, but enjoying the sun in Austin.</li>
+      </ul>
+    </div>
+  </Term>
 </section>
 
 <style>
-  .home {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 2rem;
-    min-height: 50vh;
-  }
-  .home-bounded {
-    background: rgba(0,0,0,0.04); /* Slightly darker, low opacity */
-    border-radius: 2rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.07);
-    max-width: 960px;
-    margin: 3rem auto;
-    overflow: hidden;
-  }
-  .home-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
-  }
-  .home-text h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  /* Removed unused .home-text p selector */
-  .home-text h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  @media (max-width: 768px) {
-    .home {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-  /* Add creative-list styling */
   .creative-list {
     list-style: none;
     padding-left: 0;

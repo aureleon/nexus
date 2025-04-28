@@ -14,7 +14,6 @@
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
 
-  // Store for current theme
   const theme = writable('light');
 
   onMount(() => {

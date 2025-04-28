@@ -6,7 +6,7 @@ import App from '../routes/App.svelte';
 ---
 <Layout>
   <Header client:load />
-  <main style="flex: 1; display: flex; align-items: center; justify-content: center;">
+  <main style="flex: 1 1 auto; display: flex; align-items: center; justify-content: center; position: relative; min-height: 0; min-width: 0; width: 100%; height: 100%;">
     <App client:only="svelte" />
   </main>
   <Footer client:load />

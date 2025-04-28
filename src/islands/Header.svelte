@@ -24,7 +24,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color-secondary);
+  box-shadow: 0 1px 8px var(--shadow-color);
 }
 
 .tab-nav {
@@ -35,13 +37,14 @@ header {
   flex: 1;
   gap: 0;
 }
+
 .tab-nav :global(.tab) {
   flex: 1 1 0;
   display: flex;
   justify-content: center;
 }
+
 nav {
-  /* Remove previous nav styles that set width/gap */
   width: unset;
   gap: unset;
   margin-top: 0.5rem;
