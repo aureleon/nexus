@@ -1,21 +1,20 @@
 <script>
   import Icon from './Icon.svelte';
   import Tab from './Tab.svelte';
+  import ThemeButton from './Theme.svelte';
   import { theme, toggleTheme } from '../lib/ThemeStore.ts';
   let currentTheme;
   theme.subscribe(value => currentTheme = value);
 </script>
 
 <header>
-  <Icon class="logo" src="/extra/aureleon.png" alt="Logo" width={56} height={56} />
-  <nav>
+  <Icon href="/" src="/extra/aureleon.png" alt="Logo" width={56} height={56} style="vertical-align: middle;" ariaLabel="Homepage" />
+  <nav class="tab-nav">
     <Tab href="#about" label="About" />
     <Tab href="#projects" label="Projects" />
     <Tab href="#contact" label="Contact" />
   </nav>
-  <button aria-label="Toggle theme" on:click={toggleTheme} style="background:none;border:none;cursor:pointer;padding:0;margin-left:auto;">
-    <Icon src={currentTheme === 'light' ? '/extra/lightbulb-on.svg' : '/extra/lightbulb-off.svg'} alt="Lightbulb Icon" width={28} height={28} />
-  </button>
+  <ThemeButton lightSrc='/extra/lightbulb-on.svg' darkSrc='/extra/lightbulb-off.svg' />
 </header>
 
 <style>
@@ -28,12 +27,23 @@ header {
   border-bottom: 1px solid #333;
 }
 
-nav {
+.tab-nav {
   display: flex;
   flex-direction: row;
-  justify-content: stretch;
-  gap: 2rem;
-  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  gap: 0;
+}
+.tab-nav :global(.tab) {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  /* Remove previous nav styles that set width/gap */
+  width: unset;
+  gap: unset;
   margin-top: 0.5rem;
 }
 </style>

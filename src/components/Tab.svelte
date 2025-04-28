@@ -7,7 +7,10 @@
 
 <style>
 a {
-  flex: 1 1 0;
+  display: inline-block;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
   text-align: center;
   color: inherit;
   text-decoration: none;
