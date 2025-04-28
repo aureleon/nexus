@@ -3,13 +3,15 @@
 </script>
 
 <footer class="footer">
-  <div class="footer-content">
-    <p>
-      <span class="footer-owner">&copy; {currentYear} Daniel Guzman. Let's connect:
-        <a href="mailto:dhguzman@proton.me" class="footer-link" aria-label="Email">
-          <img src="/socials/email-dark.svg" alt="Email" width="32" height="32" style="vertical-align: middle;" />
-        </a>
+  <div class="footer-content-row">
+    <div class="footer-main-text">
+      <div class="footer-copyright">&copy; {currentYear} Daniel Guzman.</div>
+      <div class="footer-connect">
+        Let's connect:
         <span class="footer-socials">
+          <a href="mailto:dhguzman@proton.me" class="footer-link" aria-label="Email">
+            <img src="/socials/email-dark.svg" alt="Email" width="32" height="32" style="vertical-align: middle;" />
+          </a>
           <a href="https://github.com/aureleon" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub">
             <img src="/socials/github.svg" alt="GitHub" width="20" height="20" style="vertical-align: middle;" />
           </a>
@@ -17,8 +19,8 @@
             <img src="/socials/linkedin.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;" />
           </a>
         </span>
-      </span>
-    </p>
+      </div>
+    </div>
     <div class="built-with">
       <span>
         Built with
@@ -40,9 +42,9 @@
 
 <style>
 .footer {
-  padding: 2rem 0 1.5rem 0;
+  padding: 0.5rem 0 0.3rem 0; /* Reduced padding */
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Slightly smaller font */
   border-top: 1px solid #333;
   margin-top: auto;
   background: none;
@@ -51,42 +53,38 @@
   font-family: 'Fira Mono', monospace;
 }
 
-.footer-content {
-  max-width: 700px;
-  margin: 0 auto;
+.footer-content-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.footer-content p {
+  justify-content: space-between;
+  max-width: 100vw;
   margin: 0;
-  font-size: 1.1rem;
-  letter-spacing: 0.01em;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  width: 100vw;
+  gap: 0;
+  position: relative;
 }
 
-.footer-owner {
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  margin-right: 0.2em;
-  padding: 0 0.1em;
-  font-weight: 400;
+.footer-main-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 0.5em;
 }
 
 .footer-link {
   color: inherit;
   text-decoration: none;
-  margin: 0 0.15em 0 0.15em;
+  margin: 0 0.08em 0 0.08em; /* Reduced margin */
   transition: color 0.2s;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.95rem; /* Slightly smaller font */
   letter-spacing: 0.1em;
 }
 
@@ -96,26 +94,80 @@
 }
 
 .built-with {
-  margin-top: 0.2rem;
-  font-size: 1rem;
-  opacity: 0.7;
-  letter-spacing: 0.01em;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 0.3em;
+  justify-content: flex-end;
+  text-align: right;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  letter-spacing: 0.01em;
+  gap: 0.15em;
+  white-space: nowrap;
+  margin-left: auto;
 }
 
 .footer-plus {
   color: #00ADB5;
   font-weight: 500;
-  font-size: 1.1em;
-  margin: 0 0.15em;
+  font-size: 1em; /* Slightly smaller font */
+  margin: 0 0.08em;
 }
 
 .footer-socials {
-  margin-left: 0.5em;
+  margin-left: 0.2em; /* Reduced margin */
   display: inline-flex;
-  gap: 0.3em;
+  gap: 0.15em; /* Reduced gap */
   align-items: center;
+}
+
+.footer-copyright {
+  white-space: nowrap;
+}
+
+.footer-connect {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .footer-content-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    position: static;
+  }
+  .built-with {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .footer-main-text {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .built-with {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main-text {
+    flex-direction: column;
+    gap: 0.2em;
+  }
 }
 </style>

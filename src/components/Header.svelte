@@ -3,7 +3,6 @@
 </script>
 
 <header>
-  <div class="logo">DANIEL GUZMAN</div>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -12,13 +11,6 @@
 </header>
 
 <style>
-.logo {
-  font-weight: bold;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
-  font-family: 'Fira Mono', monospace;
-}
 nav {
   display: flex;
   gap: 2rem;

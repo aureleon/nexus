@@ -1,13 +1,13 @@
 ---
-import BaseLayout from './layouts/BaseLayout.astro';
-import Hero from './components/Hero.svelte';
-import Header from './components/Header.svelte';
-import Footer from './components/Footer.svelte';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.svelte';
+import Header from '../components/Header.svelte';
+import Footer from '../components/Footer.svelte';
 ---
 <BaseLayout>
   <Header />
   <main>
-    <Hero />
+    <Hero client:load />
   </main>
   <Footer />
 </BaseLayout>
