@@ -9,7 +9,7 @@
       <a href="#projects" class="btn">View Projects</a>
     </div>
     <div class="hero-icon">
-      <img src="/lightbulb.svg" alt="Lightbulb Icon" />
+      <img src="/extra/lightbulb.svg" alt="Lightbulb Icon" />
     </div>
   </section>
 
