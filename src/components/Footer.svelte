@@ -1,4 +1,5 @@
 <script>
+    import Icon from './Icon.svelte';
     const currentYear = new Date().getFullYear();
 </script>
 
@@ -9,14 +10,14 @@
       <div class="footer-connect">
         Let's connect:
         <span class="footer-socials">
-          <a href="mailto:dhguzman@proton.me" class="footer-link" aria-label="Email">
-            <img src="/socials/email-dark.svg" alt="Email" width="32" height="32" style="vertical-align: middle;" />
+          <a href="mailto:dhguzman@proton.me" class="footer-link" aria-label="@Email">
+            <Icon src="/socials/email-dark.svg" alt="Email" width={32} height={32} style="vertical-align: middle;" />
           </a>
-          <a href="https://github.com/aureleon" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub">
-            <img src="/socials/github.svg" alt="GitHub" width="20" height="20" style="vertical-align: middle;" />
+          <a href="https://github.com/aureleon" class="footer-link" target="_blank" rel="noopener" aria-label="@GitHub">
+            <Icon src="/socials/github.svg" alt="GitHub" width={20} height={20} style="vertical-align: middle;" />
           </a>
-          <a href="https://linkedin.com/in/dhguzman" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="/socials/linkedin.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;" />
+          <a href="https://linkedin.com/in/dhguzman" class="footer-link" target="_blank" rel="noopener" aria-label="@LinkedIn">
+            <Icon src="/socials/linkedin.svg" alt="LinkedIn" width={20} height={20} style="vertical-align: middle;" />
           </a>
         </span>
       </div>
@@ -24,16 +25,16 @@
     <div class="built-with">
       <span>
         Built with
-        <a href="https://bun.sh/" target="_blank" rel="noopener" class="footer-link" aria-label="Bun">
-          <img src="/icons/bun.svg" alt="Bun" width="20" height="20" style="vertical-align: middle;" />
+        <a href="https://bun.sh/" target="_blank" rel="noopener" class="footer-link" aria-label="<Bun/>">
+          <Icon src="/icons/bun.svg" alt="Bun" width={20} height={20} style="vertical-align: middle;" />
         </a>
         <span class="footer-plus">+</span>
-        <a href="https://svelte.dev/" target="_blank" rel="noopener" class="footer-link" aria-label="Svelte">
-          <img src="/icons/svelte.svg" alt="Svelte" width="20" height="20" style="vertical-align: middle;" />
+        <a href="https://svelte.dev/" target="_blank" rel="noopener" class="footer-link" aria-label="<Svelte/>">
+          <Icon src="/icons/svelte.svg" alt="Svelte" width={20} height={20} style="vertical-align: middle;" />
         </a>
         <span class="footer-plus">+</span>
-        <a href="https://astro.build/" target="_blank" rel="noopener" class="footer-link" aria-label="Astro">
-          <img src="/icons/astro.svg" alt="Astro" width="20" height="20" style="vertical-align: middle;" />
+        <a href="https://astro.build/" target="_blank" rel="noopener" class="footer-link" aria-label="<Astro/>">
+          <Icon src="/icons/astro.svg" alt="Astro" width={20} height={20} style="vertical-align: middle;" />
         </a>
       </span>
     </div>
@@ -42,15 +43,15 @@
 
 <style>
 .footer {
-  padding: 0.5rem 0 0.3rem 0; /* Reduced padding */
+  padding: 0.5rem 0 0.3rem 0;
   text-align: center;
-  font-size: 0.9rem; /* Slightly smaller font */
+  font-size: 0.9rem;
   border-top: 1px solid #333;
   margin-top: auto;
   background: none;
-  color: #E0E0E0;
   box-shadow: none;
-  font-family: 'Fira Mono', monospace;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .footer-content-row {
@@ -110,14 +111,14 @@
 .footer-plus {
   color: #00ADB5;
   font-weight: 500;
-  font-size: 1em; /* Slightly smaller font */
+  font-size: 1em;
   margin: 0 0.08em;
 }
 
 .footer-socials {
-  margin-left: 0.2em; /* Reduced margin */
+  margin-left: 0.2em;
   display: inline-flex;
-  gap: 0.15em; /* Reduced gap */
+  gap: 0.15em;
   align-items: center;
 }
 
@@ -158,6 +159,10 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    width: 100vw;
+    min-height: unset;
+  }
   .built-with {
     width: 100%;
     justify-content: center;
@@ -170,4 +175,5 @@
     gap: 0.2em;
   }
 }
+
 </style>

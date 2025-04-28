@@ -6,36 +6,13 @@ body {
     padding: 0;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #333;
-    font-family: 'Fira Mono', monospace;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    font-family: 'Fira Mono', monospace;
-}
-
-nav a {
-    color: #E0E0E0;
-    margin-left: 1.5rem;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Fira Mono', monospace;
-}
-
-nav a:hover {
-    color: #00ADB5;
-}
-
 /* Main */
 main {
     padding-top: 2rem;
-    font-family: 'Fira Mono', monospace;
+    /* font-family removed, inherited from body */
+}
+
+/* Footer global styles */
+footer.footer {
+    color: #E0E0E0;
 }

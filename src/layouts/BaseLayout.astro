@@ -8,8 +8,9 @@ const { title = "Daniel Guzman | Portfolio" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/extra/aureleon.png" />
   </head>
-  <body>
+  <body style="display: flex; flex-direction: column; min-height: 100vh;">
     <slot />
   </body>
 </html>
