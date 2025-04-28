@@ -6,25 +6,33 @@
   <div class="footer-content">
     <p>
       <span class="footer-owner">&copy; {currentYear} Daniel Guzman. Let's connect:
-        <a href="mailto:dhguzman@proton.me" class="footer-link">dhguzman@proton.me</a>
-      </span>
-      <span class="footer-socials">
-        <a href="https://github.com/dhguzman" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub">
-          <img src="/websites/github-mark-white.svg" alt="GitHub" width="20" height="20" style="vertical-align: middle;" />
+        <a href="mailto:dhguzman@proton.me" class="footer-link" aria-label="Email">
+          <img src="/socials/email-dark.svg" alt="Email" width="32" height="32" style="vertical-align: middle;" />
         </a>
-        <a href="https://linkedin.com/in/dhguzman" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="/websites/linkedin-svgrepo-com.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;" />
-        </a>
+        <span class="footer-socials">
+          <a href="https://github.com/aureleon" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="/socials/github.svg" alt="GitHub" width="20" height="20" style="vertical-align: middle;" />
+          </a>
+          <a href="https://linkedin.com/in/dhguzman" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="/socials/linkedin.svg" alt="LinkedIn" width="20" height="20" style="vertical-align: middle;" />
+          </a>
+        </span>
       </span>
     </p>
     <div class="built-with">
       <span>
         Built with
-        <a href="https://bun.sh/" target="_blank" rel="noopener" class="footer-link">Bun</a>
+        <a href="https://bun.sh/" target="_blank" rel="noopener" class="footer-link" aria-label="Bun">
+          <img src="/icons/bun.svg" alt="Bun" width="20" height="20" style="vertical-align: middle;" />
+        </a>
         <span class="footer-plus">+</span>
-        <a href="https://svelte.dev/" target="_blank" rel="noopener" class="footer-link">Svelte</a>
+        <a href="https://svelte.dev/" target="_blank" rel="noopener" class="footer-link" aria-label="Svelte">
+          <img src="/icons/svelte.svg" alt="Svelte" width="20" height="20" style="vertical-align: middle;" />
+        </a>
         <span class="footer-plus">+</span>
-        <a href="https://astro.build/" target="_blank" rel="noopener" class="footer-link">Astro</a>
+        <a href="https://astro.build/" target="_blank" rel="noopener" class="footer-link" aria-label="Astro">
+          <img src="/icons/astro.svg" alt="Astro" width="20" height="20" style="vertical-align: middle;" />
+        </a>
       </span>
     </div>
   </div>
