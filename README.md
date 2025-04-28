@@ -13,21 +13,25 @@ A modern, fast, and minimal personal portfolio built with [Astro](https://astro.
 
 ```text
 /
-├── public/           # Static assets (images, icons, styles)
+├── public/                # Static assets (images, icons, styles)
 │   ├── style.css
-│   ├── extra/        # Custom images and SVGs
-│   └── socials/      # Social media icons
+│   ├── extra/             # Custom images and SVGs
+│   ├── icons/             # Technology icons
+│   ├── socials/           # Social media icons
+│   └── term/              # Terminal UI assets
 ├── src/
-│   ├── components/   # Svelte UI components (Header, Footer, etc.)
-│   ├── layouts/      # Astro layout wrappers
-│   ├── lib/          # Shared stores and utilities
-│   ├── pages/        # Astro entrypoints (index.astro)
-│   └── routes/       # Svelte SPA route components
+│   ├── components/        # Svelte UI components (Icon, Tab, Theme)
+│   ├── islands/           # Svelte components for partial hydration (Footer, Header, Term)
+│   ├── layouts/           # Astro layout wrappers (Layout.astro)
+│   ├── lib/               # Shared stores and utilities (ThemeStore.ts)
+│   ├── pages/             # Astro entrypoints (index.astro)
+│   └── routes/            # Svelte SPA route components (About, App, Contact, Home, Projects)
 ├── astro.config.mjs
 ├── svelte.config.js
 ├── tsconfig.json
 ├── package.json
-└── bun.lock
+├── bun.lock
+└── LICENSE
 ```
 
 ## 🚀 Getting Started
