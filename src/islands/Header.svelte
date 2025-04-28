@@ -1,7 +1,7 @@
 <script>
-  import Icon from './Icon.svelte';
-  import Tab from './Tab.svelte';
-  import ThemeButton from './Theme.svelte';
+  import Icon from '../components/Icon.svelte';
+  import Tab from '../components/Tab.svelte';
+  import Theme from '../components/Theme.svelte';
   import { theme, toggleTheme } from '../lib/ThemeStore.ts';
   let currentTheme;
   theme.subscribe(value => currentTheme = value);
@@ -14,7 +14,7 @@
     <Tab href="/#/projects" label="Projects" />
     <Tab href="/#/contact" label="Contact" />
   </nav>
-  <ThemeButton lightSrc='/extra/lightbulb-on.svg' darkSrc='/extra/lightbulb-off.svg' />
+  <Theme lightSrc='/extra/lightbulb-on.svg' darkSrc='/extra/lightbulb-off.svg' />
 </header>
 
 <style>

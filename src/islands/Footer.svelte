@@ -1,5 +1,5 @@
 <script>
-    import Icon from './Icon.svelte';
+    import Icon from '../components/Icon.svelte';
     const currentYear = new Date().getFullYear();
 </script>
 
@@ -10,8 +10,8 @@
       <div class="footer-connect">
         Let's connect:
         <span class="footer-socials">
-          <Icon href="mailto:dhguzman@proton.me" src="/socials/email-dark.svg" alt="Email" width={32} height={32} style="vertical-align: middle;" ariaLabel="@Email" />
-          <Icon href="https://github.com/aureleon" src="/socials/github.svg" alt="GitHub" width={20} height={20} style="vertical-align: middle;" ariaLabel="@GitHub" target="_blank" rel="noopener" />
+          <Icon href="mailto:dhguzman@proton.me" srcLight='/socials/email-light.svg' srcDark="/socials/email-dark.svg" alt="Email" width={32} height={32} style="vertical-align: middle;" ariaLabel="@Email" />
+          <Icon href="https://github.com/aureleon" srcLight='/socials/github-light.svg' srcDark="/socials/github-dark.svg" alt="GitHub" width={20} height={20} style="vertical-align: middle;" ariaLabel="@GitHub" target="_blank" rel="noopener" />
           <Icon href="https://linkedin.com/in/dhguzman" src="/socials/linkedin.svg" alt="LinkedIn" width={20} height={20} style="vertical-align: middle;" ariaLabel="@LinkedIn" target="_blank" rel="noopener" />
         </span>
       </div>

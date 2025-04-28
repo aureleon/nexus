@@ -8,6 +8,33 @@
   export let ariaLabel: string | undefined = undefined;
   export let target: string | undefined = undefined;
   export let rel: string | undefined = undefined;
+  export let srcDark: string | undefined = undefined;
+  export let srcLight: string | undefined = undefined;
+
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+
+  // Store for current theme
+  const theme = writable('light');
+
+  onMount(() => {
+    const getTheme = () => (
+      document.documentElement.getAttribute('data-theme') || 'light'
+    );
+    theme.set(getTheme());
+    const observer = new MutationObserver(() => {
+      theme.set(getTheme());
+    });
+    observer.observe(document.documentElement, {
+      attributes: true, attributeFilter: ['data-theme']
+    });
+    return () => observer.disconnect();
+  });
+
+  $: selectedSrc = src;
+  $: if (srcDark && srcLight) {
+    selectedSrc = $theme === 'dark' ? srcDark : srcLight;
+  }
 </script>
 
 <style>
@@ -27,8 +54,8 @@
     target={target}
     rel={rel}
   >
-    <img class="bounce-hover" {src} {alt} {width} {height} style={style} loading="lazy" />
+    <img class="bounce-hover" src={selectedSrc} {alt} {width} {height} style={style} loading="lazy" />
   </a>
 {:else}
-  <img class="bounce-hover" {src} {alt} {width} {height} style={style} loading="lazy" />
+  <img class="bounce-hover" src={selectedSrc} {alt} {width} {height} style={style} loading="lazy" />
 {/if}

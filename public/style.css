@@ -1,18 +1,24 @@
 body {
-    background-color: #121212;
-    color: #E0E0E0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Fira Mono', monospace;
     margin: 0;
     padding: 0;
 }
 
-/* Main */
-main {
-    padding-top: 2rem;
-    /* font-family removed, inherited from body */
+:root[data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: #E0E0E0;
+}
+:root[data-theme='light'] {
+    --bg-color: #FAFAFA;
+    --text-color: #222222;
 }
 
-/* Footer global styles */
+main {
+    padding-top: 2rem;
+}
+
 footer.footer {
-    color: #E0E0E0;
+    color: var(--text-color);
 }
